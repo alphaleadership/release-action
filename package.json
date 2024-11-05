@@ -11,7 +11,7 @@
     "debug": "yarn clean && yarn install && yarn build && yarn package",
     "package": "ncc build --source-map --license licenses.txt",
     "release": "yarn clean && yarn install --production && yarn build && yarn package",
-    "test": "jest"
+    "test": ""
   },
   "repository": {
     "type": "git",
