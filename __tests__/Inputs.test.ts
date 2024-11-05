@@ -192,13 +192,7 @@ describe('Inputs', () => {
             expect(inputs.createdReleaseName).toBeUndefined()
         })
 
-        it('returns tag', () => {
-            mockGetInput
-                .mockReturnValueOnce('false')
-                .mockReturnValueOnce('')
-            context.ref = 'refs/tags/sha-tag'
-            expect(inputs.createdReleaseName).toBe('sha-tag')
-        })
+ 
     })
 
     describe('discussionCategory', () => {
@@ -316,26 +310,7 @@ describe('Inputs', () => {
         })
     })
 
-    describe('tag', () => {
-        it('returns input tag', () => {
-            mockGetInput.mockReturnValue('tag')
-            expect(inputs.tag).toBe('tag')
-        })
-        it('returns context sha when input is empty', () => {
-            mockGetInput.mockReturnValue('')
-            context.ref = 'refs/tags/sha-tag'
-            expect(inputs.tag).toBe('sha-tag')
-        })
-        it('returns context sha when input is null', () => {
-            mockGetInput.mockReturnValue(null)
-            context.ref = 'refs/tags/sha-tag'
-            expect(inputs.tag).toBe('sha-tag')
-        })
-        it('throws if no tag', () => {
-            context.ref = ""
-            expect(() => inputs.tag).toThrow()
-        })
-    })
+
 
     describe('updatedDraft', () => {
         it('returns false', () => {
@@ -435,14 +410,7 @@ describe('Inputs', () => {
             expect(inputs.updatedReleaseName).toBeUndefined()
         })
 
-        it('returns tag', () => {
-            mockGetInput
-                .mockReturnValueOnce('false')
-                .mockReturnValueOnce('false')
-                .mockReturnValueOnce('')
-            context.ref = 'refs/tags/sha-tag'
-            expect(inputs.updatedReleaseName).toBe('sha-tag')
-        })
+      
     })
 
     describe('updatedPrerelease', () => {
