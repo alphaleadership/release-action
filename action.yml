@@ -1,4 +1,4 @@
-name: 'Create Release'
+name: 'fast-release'
 description: 'Creates github releases'
 author: 'Nick Cipollo'
 inputs:
